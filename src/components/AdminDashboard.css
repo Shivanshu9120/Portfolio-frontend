@@ -1,0 +1,710 @@
+/* Global reset for box-sizing */
+* {
+  box-sizing: border-box;
+}
+
+/* Base container */
+.dashboard-container {
+  padding: 2rem 1rem; /* Adjusted padding for small screens */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 1000px;
+  margin: auto;
+  color: #f0f0f0;
+  overflow-x: hidden;
+}
+
+/* Header */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Logout button */
+.logout-btn {
+  background-color: #e74c3c;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* Add new admin button */
+.add-btn {
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 6px;
+  margin: 1.5rem 0;
+  cursor: pointer;
+  width: 100%;
+  max-width: 250px;
+}
+
+/* Admin card */
+.admin-card {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 1.5rem;
+  width: 100%;
+  gap: 1.5rem;
+}
+
+/* Admin image */
+.admin-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 2px solid #2ecc71;
+  flex-shrink: 0;
+}
+
+/* Details section */
+.admin-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  min-width: 200px;
+}
+
+/* Inputs */
+.admin-details input {
+  padding: 0.6rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #666;
+  background-color: #3a3a3a;
+  color: #f0f0f0;
+  width: 100%;
+}
+
+/* Action buttons */
+.admin-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+/* Buttons */
+.edit-btn,
+.save-btn,
+.cancel-btn,
+.delete-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  flex: 1 1 auto;
+  min-width: 100px;
+}
+
+/* Button colors */
+.edit-btn {
+  background-color: #3498db;
+}
+.save-btn {
+  background-color: #2ecc71;
+}
+.cancel-btn {
+  background-color: #7f8c8d;
+}
+.delete-btn {
+  background-color: #c0392b;
+}
+
+/* Loading text */
+.loading {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+/* Links */
+.admin-details a {
+  color: #2ecc71;
+  text-decoration: underline;
+}
+
+/* Media Queries for small screens */
+@media (max-width: 600px) {
+  .admin-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .add-btn,
+  .logout-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .admin-actions {
+    flex-direction: column;
+  }
+}
+
+
+.skill-card {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 1000px;
+  margin: 2rem auto;
+  box-shadow: 0 8px 16px rgba(0, 255, 128, 0.15);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.skill-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #A5D6A7;
+  text-align: center;
+  border-bottom: 2px solid #333;
+  padding-bottom: 0.5rem;
+}
+
+.skill-input {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.skill-input input {
+  flex: 1;
+  min-width: 220px;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+  transition: 0.2s;
+}
+
+.skill-input input:focus {
+  outline: none;
+  background-color: #333;
+}
+
+.skill-input input::placeholder {
+  color: #999;
+}
+
+.skill-input button {
+  padding: 0.75rem 1.2rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.skill-input button:hover {
+  background-color: #43a047;
+}
+
+.skill-list {
+  list-style: none;
+  padding: 0;
+}
+
+.skill-item {
+  background-color: #2a2a2a;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.2rem;
+  border-radius: 0.7rem;
+  box-shadow: 0 0 6px rgba(76, 175, 80, 0.1);
+}
+
+.skill-item strong {
+  font-size: 1.2rem;
+  color: #A5D6A7;
+}
+
+.skill-item ul {
+  padding-left: 1.2rem;
+  margin-top: 0.6rem;
+}
+
+.skill-item ul li {
+  color: #d0d0d0;
+  margin-bottom: 0.3rem;
+}
+
+.skill-item input {
+  width: 100%;
+  margin-bottom: 0.5rem;
+  padding: 0.6rem 1rem;
+  background-color: #333;
+  border: none;
+  border-radius: 0.4rem;
+  color: #eee;
+}
+
+.skill-item button {
+  margin-right: 0.6rem;
+  padding: 0.5rem 1rem;
+  background-color: #388e3c;
+  color: #fff;
+  border: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.skill-item button:hover {
+  background-color: #2e7d32;
+}
+
+@media screen and (max-width: 600px) {
+  .skill-input {
+    flex-direction: column;
+  }
+
+  .skill-input input,
+  .skill-input button {
+    width: 100%;
+  }
+
+  .skill-item {
+    padding: 1rem;
+  }
+}
+
+
+/* Container Card */
+.progress-card {
+  margin-top: 30px;
+  padding: 20px;
+  background: #1e1e1e; /* Dark Gray */
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 255, 128, 0.15);
+  color: #e0e0e0;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Header inside progress card */
+.progress-card h2 {
+  color: #00ff88; /* Green */
+  margin-bottom: 15px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Input Section */
+.progress-input {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.progress-input input {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background: #2c2c2c;
+  color: #ffffff;
+  outline: none;
+  flex: 1;
+  min-width: 150px;
+}
+
+.progress-input input::placeholder {
+  color: #888;
+}
+
+.progress-input button {
+  background: #00cc66;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.progress-input button:hover {
+  background: #00a85c;
+}
+
+/* Progress List */
+.progress-list {
+  list-style: none;
+  padding: 0;
+}
+
+/* Individual Progress Item */
+.progress-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin: 8px 0;
+  padding: 10px;
+  background: #2c2c2c;
+  border-radius: 8px;
+  color: #e0ffe6;
+  transition: background 0.3s;
+}
+
+.progress-item:hover {
+  background: #333;
+}
+
+/* Edit & Save buttons */
+.progress-item button {
+  background: #00b36b;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.progress-item button:hover {
+  background: #00995a;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .progress-input {
+    flex-direction: column;
+  }
+
+  .progress-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .progress-item input {
+    width: 100%;
+  }
+}
+
+
+/* Container */
+.timeline-section {
+  margin-top: 30px;
+  padding: 25px;
+  background-color: #1f1f1f;
+  border-radius: 12px;
+  color: #e0ffe0;
+  box-shadow: 0 4px 15px rgba(40, 167, 69, 0.2);
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Heading */
+.timeline-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #b6ffb6;
+  text-align: center;
+}
+
+/* Add section */
+.timeline-add {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.timeline-add input,
+.timeline-add button {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+}
+
+.timeline-add input {
+  flex: 1 1 200px;
+  background-color: #2f2f2f;
+  color: #d4ffd4;
+}
+
+.timeline-add input::placeholder {
+  color: #aaaaaa;
+}
+
+.timeline-add button {
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.timeline-add button:hover {
+  background-color: #218838;
+}
+
+/* Timeline list */
+.timeline-list {
+  list-style: none;
+  padding: 0;
+}
+
+.timeline-list li {
+  background-color: #2b2b2b;
+  border-left: 4px solid #28a745;
+  padding: 16px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  position: relative;
+  transition: background-color 0.3s;
+}
+
+.timeline-list li:hover {
+  background-color: #333;
+}
+
+.timeline-list li strong {
+  color: #76ff76;
+  font-weight: 600;
+}
+
+.timeline-list li em {
+  color: #9eff9e;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.timeline-list li span {
+  display: block;
+  margin-top: 6px;
+  color: #ccc;
+}
+
+/* Edit Mode Inputs */
+.timeline-list li input {
+  width: calc(100% - 20px);
+  padding: 8px 10px;
+  margin-bottom: 8px;
+  background-color: #2f2f2f;
+  color: #d4ffd4;
+  border: 1px solid #444;
+  border-radius: 6px;
+}
+
+/* Buttons inside list */
+.timeline-list li button {
+  margin-right: 10px;
+  margin-top: 5px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.timeline-list li button:first-of-type {
+  background-color: #ffc107; /* Edit or Update */
+  color: #1f1f1f;
+}
+
+.timeline-list li button:first-of-type:hover {
+  background-color: #e0a800;
+}
+
+.timeline-list li button:nth-of-type(2) {
+  background-color: #dc3545; /* Cancel or Delete */
+  color: white;
+}
+
+.timeline-list li button:nth-of-type(2):hover {
+  background-color: #bd2130;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .timeline-add {
+    flex-direction: column;
+  }
+
+  .timeline-add input,
+  .timeline-add button {
+    width: 100%;
+  }
+}
+
+/* Base container */
+.section {
+  background-color: #1e1e1e;
+  color: #d4ffd4;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 1000px;
+  margin: 2rem auto;
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.15);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Headings */
+.section h2,
+.section h3 {
+  color: #7fff7f;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Input styles */
+.section input[type="text"],
+.section input[type="file"] {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  border: 1px solid #444;
+  border-radius: 6px;
+  background-color: #2c2c2c;
+  color: #d4ffd4;
+  transition: border 0.2s;
+}
+
+.section input[type="text"]:focus {
+  border-color: #7fff7f;
+  outline: none;
+}
+
+/* Buttons */
+.section button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 0.7rem 1.2rem;
+  margin: 0.5rem 0.3rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.section button:hover {
+  background-color: #388e3c;
+}
+
+/* Platform Card */
+.platform-card {
+  background-color: #2a2a2a;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-top: 1.5rem;
+  border: 1px solid #444;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  box-shadow: 0 0 8px rgba(0, 255, 0, 0.05);
+}
+
+.platform-card img {
+  height: 50px;
+  border-radius: 5px;
+  object-fit: contain;
+  background-color: #fff;
+}
+
+.platform-card p {
+  margin: 0;
+  font-weight: bold;
+}
+
+.platform-card a {
+  color: #76ff76;
+  text-decoration: underline;
+}
+
+.platform-card i {
+  font-size: 1.5rem;
+  color: #98ff98;
+}
+
+/* Edit platform section */
+.edit-platform {
+  background-color: #252525;
+  margin-top: 2rem;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid #333;
+}
+
+/* Responsive Design */
+@media (min-width: 600px) {
+  .section input[type="text"],
+  .section input[type="file"] {
+    width: calc(50% - 1rem);
+    margin-right: 1rem;
+    display: inline-block;
+  }
+
+  .platform-card {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .platform-card > * {
+    margin: 0.3rem 0.5rem;
+  }
+
+  .edit-platform input {
+    width: calc(50% - 1rem);
+    margin-right: 1rem;
+    margin-top: 0.5rem;
+    display: inline-block;
+  }
+}
+
+@media (max-width: 500px) {
+  .platform-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .section input[type="text"],
+  .section input[type="file"],
+  .edit-platform input {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #1e1e1e;
+}
+::-webkit-scrollbar-thumb {
+  background: #4caf50;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #66bb6a;
+}
