@@ -130,14 +130,14 @@ const Home = () => {
                 </span>
               </a>
             </div>
-            <div className="btn-con" style={{ marginTop: "1rem" }}>
+            {/* <div className="btn-con" style={{ marginTop: "1rem" }}>
               <Link to="/admin-login" className="main-btn">
                 <span className="btn-text">Admin Login</span>
                 <span className="btn-icon">
                   <i className="fa-solid fa-lock"></i>
                 </span>
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
       </header>
